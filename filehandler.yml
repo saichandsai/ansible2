@@ -1,0 +1,20 @@
+---
+- hosts: webservers
+  become: yes
+  tasks: 
+   - include_taks: file.yml
+   - name: install webservers on ubunut16
+     apt:
+      name: apache2
+      state: present
+     when: ansible_os_family =="Debian"
+   - name: start webservers
+     service: 
+      name: apache2
+      state: started     
+     when: ansible_os_family =="Debian"
+   - name: copy index.j2 file into ansible node side
+     template: 
+      src: index.j2
+      dest: /var/html/index.html
+         

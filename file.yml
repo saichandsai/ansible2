@@ -1,0 +1,5 @@
+---
+- name: myfile
+  file: 
+   path: /home/sai/saifile.txt
+   state: touch
