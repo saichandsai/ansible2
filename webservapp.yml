@@ -13,12 +13,12 @@
       state: started
      when: ansible_os_family =="Debian"
 
-   - name: install webserver on redhat
+   - name: install webserver on RedHat8
      yum:
       name: "{{webserversOnRedHat}}"
       state: present
      when: ansible_os_family =="RedHat" 
-   - name: start webserver on redhat
+   - name: start webserver on RedHat8
      service:
       name: "{{webserversOnRedHat}}"
       state: started
