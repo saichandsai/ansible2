@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks: 
-   - include_taks: file.yml
+   - include_tasks: file.yml
    - name: install webservers on ubunut16
      apt:
       name: apache2
@@ -17,4 +17,3 @@
      template: 
       src: index.j2
       dest: /var/html/index.html
-         
