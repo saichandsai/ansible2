@@ -1,0 +1,27 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: install webservers on redhat
+     yum:
+      name: httpd
+      state: present
+     notify: restart webserver
+     when: ansible_os_family =="RedHat"
+    
+   - name: copy index.j2 into webserver
+     template: 
+      src: index.j2
+      dest: /var/www/html/index.html
+      notify: restart webserver
+     when: ansible_os_family =="RedHat"
+     
+  handlers:
+    - name: restart webserver
+      service:
+        name: httpd
+        state: restarted
+
+    
+
+     
