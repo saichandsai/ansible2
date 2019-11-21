@@ -9,7 +9,8 @@
    - name: install wget
      apt: 
       name: wget
-     tags: wget
+     tags:
+      - wget
       
 
    - name: install tree
