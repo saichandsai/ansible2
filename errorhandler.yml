@@ -9,7 +9,8 @@
    - name: install wget
      apt: 
       name: wget
-     ignore_errors: yes 
+     tags:
+      - wget 
 
    - name: install tree
      apt:
