@@ -1,0 +1,22 @@
+---
+- hosts: 172.31.18.254
+  become: yes
+  tasks:
+   - name: execute linux cmds
+     command: hostname -f
+     register: myresult
+   - name: display the above task result
+     debug:
+      msg: "{{myresult}}"
+
+   - name: install git
+     apt:
+      name: git
+      state: present
+     when: myresult.stderr ==""       
+
+   - name: install tree
+     apt:
+      name: tree
+      state: present
+     when: myresult.stderr !=""   
