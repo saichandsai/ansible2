@@ -5,6 +5,8 @@
    - name: install git
      apt:
       name: git
+      tags:
+        - git
 
    - name: install wget
      apt: 
