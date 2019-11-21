@@ -13,7 +13,7 @@
      template: 
       src: index.j2
       dest: /var/www/html/index.html
-      notify: restart webserver
+     notify: restart webserver
      when: ansible_os_family =="RedHat"
      
   handlers:
