@@ -5,18 +5,15 @@
    - name: install git
      apt:
       name: git
-      tags:
-        - git
+      tags: 1st
 
    - name: install wget
      apt: 
       name: wget
-     tags:
-      - wget
-      
+     tags: 2nd
 
    - name: install tree
      apt:
       name: tree
-     tags:
-      - tree 
+     tags: 3rd
+      
