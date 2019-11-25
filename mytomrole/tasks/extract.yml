@@ -1,0 +1,10 @@
+---
+- name: creating directory
+  file:
+   path: /opt/tomcat
+   state: directory
+
+- name: extracting zip file
+  command:
+   cmd: sudo tar xzvf /home/sai/apache-tomcat-8.5.47.tar.gz -C /opt/tomcat --strip-components=1
+   creates: /opt/tomcat

@@ -1,0 +1,12 @@
+---
+- name: update package
+  apt:
+   name: update
+   update_cache: yes
+
+- name: install java
+  apt:
+   name: default-jdk
+   state: present
+
+   

@@ -6,3 +6,6 @@
 
 [ubuntuserver]
 172.31.18.254
+
+[appservers]
+172.31.18.254

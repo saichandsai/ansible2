@@ -1,2 +1,9 @@
 ---
 # tasks file for mytomrole
+- include_tasks: package.yml
+- include_tasks: usergroup.yml
+- include_tasks: installtom.yml
+- include_tasks: extract.yml
+- include_tasks: permisions.yml
+- include_tasks: tomconfig.yml
+- include_tasks: tomstart.yml
