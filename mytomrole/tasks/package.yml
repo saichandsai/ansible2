@@ -1,7 +1,6 @@
 ---
 - name: update package
   apt:
-   name: update
    update_cache: yes
 
 - name: install java
