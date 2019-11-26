@@ -1,0 +1,6 @@
+--- 
+- name: deploy java war file into tomcat
+  get_url:
+    url:  https://maha8899.s3.amazonaws.com/mahaLogin.war
+    dest: /opt/tomcat/webapps/mahaLogin.war
+    force_basic_auth: yes

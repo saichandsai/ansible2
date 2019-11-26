@@ -1,0 +1,15 @@
+---
+- name: tomuser file 
+  template:
+    src: templates/tomuser.j2
+    dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: managerapp file
+  template:
+    src: templates/manager.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml  
+
+- name: hostmanagerapp file
+  template:
+    src: templates/hostmanager.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml   
