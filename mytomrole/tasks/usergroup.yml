@@ -6,9 +6,9 @@
 
 - name:  adding user
   user:
-   name: tomcat
-   comment: my tom user
-   group: tomcat
-   shell: /bin/false
-   home: /opt/tomcat
+    name: tomcat
+    comment: my tom user
+    group: tomcat
+    shell: /bin/false
+    home: /opt/tomcat
   
