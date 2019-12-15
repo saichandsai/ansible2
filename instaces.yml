@@ -1,5 +1,5 @@
 ---
-- hostes: localhost
+- hosts: localhost 
   become: yes
   tasks: 
   - name: creating  ansible node
