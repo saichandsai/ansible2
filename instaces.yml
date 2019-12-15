@@ -12,6 +12,6 @@
      group: launch-wizard-4
      count: 2
      vpc_subnet_id: subnet-2fca3862
-     assign_public-ip: yes
+     assign_public_ip: yes
      instance_tags: 
-      name: ansi-nodes
+       name: ansi-nodes
