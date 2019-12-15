@@ -4,7 +4,7 @@
   tasks: 
   - name: creating  ansible node
     ec2: 
-     key_name: k8s.pem
+     key_name: k8s
      instance_type: t2.micro
      image: ami-01362b1669b6d5164
      wait: yes
