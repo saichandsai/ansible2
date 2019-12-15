@@ -1,0 +1,17 @@
+---
+- hostes: localhost
+  become: yes
+  tasks: 
+  - name: creating  ansible node
+    ec2: 
+     key_name: k8s.pem
+     instance_type: t2.micro
+     image: ami-01362b1669b6d5164
+     wait: yes
+     region: us-east-1
+     group: launch-wizard-4
+     count: 2
+     vpc_subnet_id: subnet-2fca3862
+     assign_public-ip: yes
+     instance_tags: 
+      name: ansi-nodes
