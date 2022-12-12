@@ -1,4 +1,5 @@
-- name: myfile
+hosts: all
+ - name: myfile
     file:
       path: /home/sai/sai1.txt
       state: touch
