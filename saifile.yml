@@ -1,6 +1,6 @@
 - hosts: all
    - name: myfile
       file:
-        path: /home/sai/sai1.txt
-        state: touch
-        become: yes
+       path: /home/sai/sai1.txt
+       state: touch
+       become: yes
