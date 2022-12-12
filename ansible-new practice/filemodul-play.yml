@@ -7,7 +7,7 @@
       path : /home/sai/filemodule
       state: directory
       mode: 0755
-  -name: creating a file inside the filemodule dir  
+  - name: creating a file inside the filemodule dir  
     file:  
       path: /home/sai/hima.txt
       state: touch
