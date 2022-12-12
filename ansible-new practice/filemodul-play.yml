@@ -4,7 +4,7 @@
   tasks:
   - name: creating file on user sai
     file:
-      path: /home/sai/ansible2/hima
+      path: /home/sai/hima
       state: touch
       mode: 0755
 
