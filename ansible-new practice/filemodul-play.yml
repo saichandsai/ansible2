@@ -2,9 +2,14 @@
   hosts: all
   become: yes
   tasks:
-  - name: creating file on user sai
+  - name: creating directory on user sai
     file:
-      path: /home/sai/hima
+      path : /home/sai/filemodule
+      state: directory
+      mode: 0755
+  -name: creating a file inside the filemodule dir  
+    file:  
+      path: /home/sai/hima.txt
       state: touch
       mode: 0755
 
