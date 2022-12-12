@@ -1,8 +1,10 @@
 - name: creating first file
   hosts: all
+  become: yes
   tasks:
   - name: creating file on user sai
     file:
       path: /home/sai/ansible2/hima
       state: touch
-      mode: '0755'
+      mode: 0755
+
