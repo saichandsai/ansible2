@@ -4,14 +4,14 @@
   tasks:
   - name: creating directory on user sai
     file:
-      path : /home/sai/filemodule
+      path : ~/filemodule
       state: directory
       owner: sai
       group: sai
       mode: 0755
   - name: creating a file inside the filemodule dir  
     file:  
-      path: /home/sai/hima.txt
+      path: ~/filemodule/hima.txt
       state: touch
       mode: 0755
 
