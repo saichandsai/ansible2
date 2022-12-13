@@ -1,0 +1,9 @@
+- name: register vars playbook
+  hosts: all
+  tasks:
+  - name: find os-name
+    command: uname -a
+    register: os_type
+  - name: print os-name
+    debug:
+      msg: "os_type: {{os_type.stdout}}"
