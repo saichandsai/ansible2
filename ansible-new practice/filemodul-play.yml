@@ -16,8 +16,8 @@
   #     mode: 0755
   - name: move hima file to filemodule directory
     copy:
-      src: home\sai\hima.txt
-      dest: home\sai\filemodule
+      src: home/sai/hima.txt
+      dest: home/sai/filemodule/hima.txt
       owner: sai
       group: sai
       mode: 0755
