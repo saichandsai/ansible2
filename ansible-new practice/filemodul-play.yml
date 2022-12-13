@@ -16,17 +16,22 @@
   #     mode: 0755
   - name: creating a file on filemodule
     file: 
-      path: ~/filemodule/himafile.txt
+      path: /home/sai/filemodule/himafile.txt
       state: touch
       owner: sai
       group: sai
       mode: 0655
+      register: copystatus
   - name: move hima file to filemodule directory  
     copy:
-      src: ~/filemodule/himafile.txt
-      dest: ~/
+      src: /home/sai/filemodule/himafile.txt
+      dest: /~/
       owner: sai
       group: sai
       mode: 0755
       remote_src: true
+      register: copystatus
+  - name: print status
+    debug:
+      msg: "{{copystatus}}"
       
