@@ -1,0 +1,13 @@
+- name: extravars playbook
+  hosts: all
+  tasks:
+  - name: create a file using  extravars
+    file: "{{filename}}"
+    owner: "{{ownername}}"
+    group: "{{groupname}}"
+    mode: "{{perm}}"
+    state: touch
+  register: extra_vars
+- name: printing the value
+  debug:
+    msg: "{{extra_vars}}"
