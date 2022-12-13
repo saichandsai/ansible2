@@ -7,7 +7,7 @@
     group: "{{groupname}}"
     mode: "{{perm}}"
     state: touch
-  register: extra_vars
+    register: extra_vars
 - name: printing the value
   debug:
     msg: "{{extra_vars}}"
