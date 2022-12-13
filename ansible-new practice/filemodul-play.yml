@@ -17,6 +17,9 @@
   - name: move hima file to filemodule directory
     copy:
       src: home/sai/hima.txt
-      dest: ~/filemodule
+      dest: home/sai/filemodule
+      owner: sai
+      group: sai
+      mode: 0755
       remote_src: true
-      become: yes
+      
