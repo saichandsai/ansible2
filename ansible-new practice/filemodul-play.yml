@@ -14,10 +14,17 @@
   #     path: ~/filemodule/hima.txt
   #     state: touch
   #     mode: 0755
-  - name: move hima file to filemodule directory
+  - name: creating a file on filemodule
+    file: 
+      path: ~/filemodule/himafile.txt
+      state: touch
+      owner: sai
+      group: sai
+      mode: 0655
+  - name: move hima file to filemodule directory  
     copy:
-      src: ~/hima.txt
-      dest: ~/filemodule/hima.txt
+      src: ~/filemodule/himafile.txt
+      dest: ~/
       owner: sai
       group: sai
       mode: 0755
