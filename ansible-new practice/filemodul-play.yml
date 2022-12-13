@@ -16,6 +16,6 @@
   #     mode: 0755
   - name: move hima file to filemodule directory
     copy:
-      src: ~/hima.txt
+      src: home/sai/hima.txt
       dest: ~/filemodule
       remote_src: true
