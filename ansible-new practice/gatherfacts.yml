@@ -11,3 +11,9 @@
   - name: displaying total memory 
     debug: 
       msg: "total available memory: {{ansible_memory_mb.real.total}}"
+  - name: ansible domain names
+    debug: 
+      msg: "ansible-domain info: {{ansible_domain}}"
+  - name: ansible env details
+    debug:
+      msg: "ansible-env: {{ansible_env}}"
