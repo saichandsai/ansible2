@@ -4,14 +4,18 @@
   tasks:
   - name: creating directory on user sai
     file:
-      path : ~/filemodule
+      path: ~/filemodule
       state: directory
       owner: sai
       group: sai
       mode: 0755
-  - name: creating a file inside the filemodule dir  
-    file:  
+  - name: creating a file inside the filemodule dir
+    file:
       path: ~/filemodule/hima.txt
       state: touch
       mode: 0755
-
+  - name: move hima file to filemodule directory
+    copy:
+      src: ~/hima
+      dest: ~/filemodule
+      remote_src: true
