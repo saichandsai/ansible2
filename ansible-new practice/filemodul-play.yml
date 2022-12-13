@@ -21,7 +21,7 @@
       owner: sai
       group: sai
       mode: 0655
-      register: copystatus
+    register: copystatus
   - name: move hima file to filemodule directory  
     copy:
       src: /home/sai/filemodule/himafile.txt
