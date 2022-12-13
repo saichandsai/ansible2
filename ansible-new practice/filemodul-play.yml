@@ -19,3 +19,4 @@
       src: home/sai/hima.txt
       dest: ~/filemodule
       remote_src: true
+      become: yes
