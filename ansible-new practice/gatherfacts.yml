@@ -9,6 +9,5 @@
     debug: 
       msg: "cpu :{{ansible_processor_cores}}"
   - name: displaying total memory 
-    degug: 
+    debug: 
       msg: "total available memory: {{ansible_memory_mb.real.total}}"
-      
