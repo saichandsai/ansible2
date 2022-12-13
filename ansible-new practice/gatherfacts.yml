@@ -1,0 +1,14 @@
+- name: disabling gather-facts
+  hosts: all
+  gather_facts: yes
+  tasks:
+  - name: displaying the ouput message 
+    debug:
+      msg: "turning of the gather-facts"
+  - name: displaying cpu details
+    debug: 
+      msg: "cpu :{{ansible_processor_cores}}"
+  - name: displaying total memory 
+    degug: 
+      msg: "total available memory: {{ansible_memory_mb.real.total}}"
+      
